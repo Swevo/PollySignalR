@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+
+    <PackageId>PollySignalR</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Swevo</Authors>
+    <Description>Polly v8 reconnect policy for SignalR. Replaces SignalR's fixed-array WithAutomaticReconnect with a full Polly v8 retry pipeline — exponential back-off, jitter, configurable max retries, max delay, and per-attempt timeout. Also provides StartWithResilienceAsync for resilient initial connections.</Description>
+    <PackageTags>polly;polly-v8;signalr;aspnetcore;signalr-client;reconnect;retry;circuit-breaker;backoff;real-time;websocket;dotnet;csharp;fault-tolerance;transient-fault;hub-connection;blazor;microservices;long-polling</PackageTags>
+    <PackageProjectUrl>https://github.com/Swevo/PollySignalR</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Swevo/PollySignalR</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReleaseNotes>Initial release. Polly v8 exponential back-off reconnect policy for SignalR HubConnection, plus StartWithResilienceAsync for resilient initial connections.</PackageReleaseNotes>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="PollySignalR.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Polly.Core" Version="8.*" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.*" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.*" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
