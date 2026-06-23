@@ -135,6 +135,7 @@ builder.Services.AddSingleton(sp =>
 
 ---
 
+| [PollyGrpc](https://www.nuget.org/packages/PollyGrpc) | Polly v8 resilience (retry, CB, timeout) for gRPC .NET clients via Interceptor |
 ## License
 
 MIT
